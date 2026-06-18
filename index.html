@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berliana Attire - Sewa Kebaya Premium</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            500: '#f43f5e',
+                            800: '#9f1239',
+                            900: '#4c0519',
+                            gold: '#d97706',
+                            goldlight: '#fef3c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-rose-50/30 text-stone-800 font-sans min-h-screen flex flex-col">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-rose-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold font-playfair tracking-wider text-brand-900">BERLIANA<span class="text-brand-gold"> ATTIRE</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide text-stone-600">
+                <a href="#katalog" class="hover:text-brand-800 transition">Katalog</a>
+                <a href="#aturan" class="hover:text-brand-800 transition">Aturan Sewa</a>
+                <a href="#booking" class="hover:text-brand-800 transition">Formulir Sewa</a>
+                <a href="#pembayaran" class="hover:text-brand-800 transition">Pembayaran</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="adminToggleBtn" onclick="toggleAdminMode()" class="px-4 py-2 text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 rounded-full transition flex items-center gap-2">
+                    <i class="fa-solid fa-lock"></i> <span id="adminBtnText">Mode Owner</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-brand-900 text-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-[500px]">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/80 to-transparent"></div>
+        
+        <div class="relative z-10 max-w-4xl text-center space-y-6">
+            <span class="inline-block px-4 py-1.5 bg-brand-gold/20 text-brand-gold rounded-full text-xs font-semibold uppercase tracking-widest border border-brand-gold/30">Premium Kebaya Rental</span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold font-playfair tracking-tight leading-none text-rose-50">
+                Tampil Anggun & Memukau di Momen Spesial Anda
+            </h1>
+            <p class="text-base sm:text-xl text-rose-100/80 max-w-2xl mx-auto font-light">
+                Sewa Kebaya Premium berkualitas tinggi untuk Wisuda, Lamaran, Kondangan, & Acara Resmi lainnya di Berliana Attire. Proses mudah, harga bersahabat.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#katalog" class="px-8 py-3.5 bg-brand-gold hover:bg-amber-600 text-white rounded-lg font-bold shadow-lg shadow-amber-700/30 transition text-center">
+                    Lihat Koleksi Kebaya
+                </a>
+                <a href="#aturan" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-bold transition text-center">
+                    Aturan Sewa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNTUNGAN / FITUR UTAMA -->
+    <section class="py-12 bg-white border-y border-rose-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 space-y-3">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto text-brand-800 text-xl">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-900">Kualitas Premium</h3>
+                    <p class="text-sm text-stone-500">Kebaya bersih, wangi, payet rapi, dan nyaman digunakan sepanjang hari.</p>
+                </div>
+                <div class="p-6 space-y-3 border-y md:border-y-0 md:border-x border-rose-100">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto text-brand-800 text-xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-900">Sewa 3 Hari</h3>
+                    <p class="text-sm text-stone-500">Fleksibilitas penuh! Ambil H-1 sebelum acara, kembalikan H+1 setelah acara selesai.</p>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto text-brand-800 text-xl">
+                        <i class="fa-solid fa-soap"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-900">Kembalikan Kotor</h3>
+                    <p class="text-sm text-stone-500">Anda tidak perlu repot mencuci. Kembalikan dalam kondisi kotor, laundry kami yang urus!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- ADMIN PANEL CONTROL (HANYA TERLIHAT JIKA ADMIN MODE AKTIF) -->
+        <div id="adminPanel" class="hidden bg-amber-50 border-2 border-brand-gold rounded-2xl p-6 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-brand-gold/20">
+                <div>
+                    <h2 class="text-xl font-extrabold text-brand-gold flex items-center gap-2">
+                        <i class="fa-solid fa-screwdriver-wrench"></i> Panel Pengelola Berliana Attire <span class="text-xs px-2 py-0.5 bg-brand-gold/20 text-brand-gold rounded-full font-normal" id="dbStatus">Memuat Database...</span>
+                    </h2>
+                    <p class="text-xs text-stone-600">Gunakan panel ini untuk mengelola katalog kebaya & memantau data penyewa langsung.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="showAdminSection('katalog-editor')" class="px-4 py-2 bg-brand-gold hover:bg-amber-600 text-white rounded-lg text-xs font-bold transition">
+                        Kelola Katalog
+                    </button>
+                    <button onclick="showAdminSection('pesanan-viewer')" class="px-4 py-2 bg-brand-900 hover:bg-brand-800 text-white rounded-lg text-xs font-bold transition">
+                        Lihat Daftar Pesanan (<span id="bookingCount">0</span>)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bagian Tambah / Edit Kebaya -->
+            <div id="admin-katalog-editor" class="space-y-4">
+                <h3 class="font-bold text-stone-800 text-sm uppercase tracking-wider">Form Tambah/Update Kebaya</h3>
+                <form id="kebayaForm" onsubmit="saveKebaya(event)" class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-white p-4 rounded-xl border border-rose-200">
+                    <input type="hidden" id="kebayaId">
+                    <div>
+                        <label class="block text-xs font-semibold text-stone-600 mb-1">Nama Kebaya</label>
+                        <input type="text" id="kebayaName" placeholder="Contoh: Kebaya Brokat Sage" required class="w-full text-sm p-2.5 border border-stone-200 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-stone-600 mb-1">Link Foto Kebaya (URL/Unsplash)</label>
+                        <input type="text" id="kebayaImage" placeholder="https://images.unsplash.com/..." class="w-full text-sm p-2.5 border border-stone-200 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-stone-600 mb-1">Ukuran Tersedia (Pisahkan koma)</label>
+                        <input type="text" id="kebayaSizes" placeholder="S, M, L, XL" required class="w-full text-sm p-2.5 border border-stone-200 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none">
+                    </div>
+                    <div class="flex items-end gap-2">
+                        <div class="flex-grow">
+                            <label class="block text-xs font-semibold text-stone-600 mb-1">Harga Sewa (Rp)</label>
+                            <input type="number" id="kebayaPrice" placeholder="150000" required class="w-full text-sm p-2.5 border border-stone-200 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none">
+                        </div>
+                        <button type="submit" class="p-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold text-sm transition flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-floppy-disk"></i> Simpan
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Bagian Daftar Pesanan Pelanggan -->
+            <div id="admin-pesanan-viewer" class="hidden space-y-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-stone-800 text-sm uppercase tracking-wider">Daftar Penyewa Terdaftar</h3>
+                    <button onclick="clearAllBookings()" class="text-xs text-rose-600 hover:underline"><i class="fa-solid fa-trash-can"></i> Hapus Semua Riwayat</button>
+                </div>
+                <div class="overflow-x-auto bg-white rounded-xl border border-rose-200">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-stone-100 text-stone-600 uppercase text-xs border-b border-stone-200">
+                                <th class="p-3">Penyewa</th>
+                                <th class="p-3">Kontak WA</th>
+                                <th class="p-3">TB / BB</th>
+                                <th class="p-3">Kebaya & Size</th>
+                                <th class="p-3">Tgl Sewa</th>
+                                <th class="p-3">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookingsTableBody" class="divide-y divide-stone-100">
+                            <tr>
+                                <td colspan="6" class="p-6 text-center text-stone-400">Belum ada pesanan masuk di database.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: KATALOG -->
+        <section id="katalog" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-brand-gold font-bold uppercase text-xs tracking-wider">Koleksi Eksklusif</span>
+                <h2 class="text-3xl font-bold font-playfair text-brand-900">Katalog Kebaya Berliana Attire</h2>
+                <div class="w-16 h-1 bg-brand-gold mx-auto my-4"></div>
+                <p class="text-stone-500 text-sm">Pilih model kebaya favorit Anda di bawah ini, cek ketersediaan ukuran, lalu isi formulir pemesanan.</p>
+            </div>
+
+            <!-- CATALOG GRID -->
+            <div id="katalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="col-span-full py-12 text-center text-stone-500">
+                    <i class="fa-solid fa-spinner fa-spin text-2xl text-brand-gold mb-2"></i>
+                    <p>Memuat Katalog Kebaya Berliana Attire...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ATURAN SEWA -->
+        <section id="aturan" class="bg-white border border-rose-100 rounded-3xl p-8 sm:p-12 shadow-sm space-y-8">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <span class="text-brand-gold font-bold uppercase text-xs tracking-wider">Wajib Dibaca</span>
+                <h2 class="text-3xl font-bold font-playfair text-brand-900">Peraturan & Ketentuan Sewa</h2>
+                <div class="w-12 h-1 bg-brand-gold mx-auto my-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Aturan 1 -->
+                <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-200/50 space-y-4">
+                    <div class="w-10 h-10 bg-amber-100 text-brand-gold rounded-xl flex items-center justify-center text-lg font-bold">1</div>
+                    <h3 class="font-bold text-brand-900 text-lg">Booking & DP</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        Booking kebaya wajib membayar <span class="font-bold text-brand-gold">DP minimal Rp 50.000</span> untuk mengunci tanggal acara Anda agar tidak disewa orang lain.
+                    </p>
+                </div>
+                <!-- Aturan 2 -->
+                <div class="p-6 rounded-2xl bg-rose-50/50 border border-rose-200/50 space-y-4">
+                    <div class="w-10 h-10 bg-rose-100 text-brand-800 rounded-xl flex items-center justify-center text-lg font-bold">2</div>
+                    <h3 class="font-bold text-brand-900 text-lg">Durasi Sewa 3 Hari</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        Masa penyewaan adalah 3 hari dengan rincian:
+                    </p>
+                    <ul class="text-xs text-stone-500 space-y-1 list-disc list-inside">
+                        <li>Ambil Kebaya: <span class="font-semibold text-stone-700">H-1 Acara</span></li>
+                        <li>Hari Acara: <span class="font-semibold text-stone-700">Hari-H</span></li>
+                        <li>Kembalikan Kebaya: <span class="font-semibold text-stone-700">H+1 Acara</span></li>
+                    </ul>
+                </div>
+                <!-- Aturan 3 -->
+                <div class="p-6 rounded-2xl bg-emerald-50/50 border border-emerald-200/50 space-y-4">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-lg font-bold">3</div>
+                    <h3 class="font-bold text-brand-900 text-lg">Kembalikan Kotor</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        Anda tidak perlu mencuci kebaya setelah digunakan. <span class="font-bold text-emerald-800">Kembalikan dalam kondisi kotor</span>. Biaya laundry sudah termasuk dalam sewa!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TWO COLUMN SECTION: BOOKING FORM & PAYMENT -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- FORM SEWA (7 COLUMNS) -->
+            <section id="booking" class="lg:col-span-7 bg-white border border-rose-100 rounded-3xl p-6 sm:p-10 shadow-md space-y-8">
+                <div class="space-y-2">
+                    <h2 class="text-2xl font-bold font-playfair text-brand-900">Formulir Sewa Kebaya</h2>
+                    <p class="text-sm text-stone-500">Silakan lengkapi data diri Anda di bawah ini dengan benar untuk memproses pemesanan kebaya.</p>
+                </div>
+
+                <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                            <input type="text" id="custName" required placeholder="Nama Anda" class="w-full text-sm p-3.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none transition bg-stone-50/50">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">No. WhatsApp Aktif</label>
+                            <input type="tel" id="custPhone" required placeholder="Contoh: 08123456789" class="w-full text-sm p-3.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none transition bg-stone-50/50">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Tinggi Badan (cm)</label>
+                            <input type="number" id="custHeight" required placeholder="Contoh: 160" class="w-full text-sm p-3.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none transition bg-stone-50/50">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Berat Badan (kg)</label>
+                            <input type="number" id="custWeight" required placeholder="Contoh: 50" class="w-full text-sm p-3.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none transition bg-stone-50/50">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Kebaya yang Dipilih</label>
+                            <select id="custKebayaSelect" required onchange="updateSizeDropdown()" class="w-full text-sm p-3.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none transition bg-stone-50/50">
+                                <option value="">-- Pilih Kebaya --</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Ukuran Kebaya</label>
+                            <select id="custSizeSelect" required class="w-full text-sm p-3.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none transition bg-stone-50/50">
+                                <option value="">-- Pilih Ukuran --</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Tanggal Mulai Sewa (H-1 Pengambilan)</label>
+                        <input type="date" id="custDate" required class="w-full text-sm p-3.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none transition bg-stone-50/50">
+                        <p class="text-xs text-brand-gold mt-1.5"><i class="fa-solid fa-circle-info"></i> Tanggal ini adalah hari pengambilan kebaya (1 hari sebelum tanggal acara Anda).</p>
+                    </div>
+
+                    <!-- Ringkasan & Hitung Biaya -->
+                    <div class="p-5 bg-rose-50/50 border border-rose-100 rounded-2xl space-y-3">
+                        <h4 class="font-bold text-brand-900 text-sm uppercase tracking-wider">Rincian Pembayaran & DP</h4>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-stone-500">Biaya Booking / Uang Muka (DP)</span>
+                            <span class="font-bold text-brand-gold">Rp 50.000</span>
+                        </div>
+                        <p class="text-xs text-stone-500">Sisa pembayaran dapat dilunasi saat pengambilan kebaya H-1 di butik.</p>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-brand-900 hover:bg-brand-800 text-white rounded-xl font-bold transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Booking Sekarang & Kirim Bukti DP ke WA
+                    </button>
+                </form>
+            </section>
+
+            <!-- INFORMASI PEMBAYARAN (5 COLUMNS) -->
+            <section id="pembayaran" class="lg:col-span-5 space-y-6">
+                <div class="bg-white border border-rose-100 rounded-3xl p-6 sm:p-8 shadow-md space-y-6">
+                    <h3 class="text-xl font-bold font-playfair text-brand-900 flex items-center gap-2">
+                        <i class="fa-solid fa-receipt text-brand-gold"></i> Metode Pembayaran DP
+                    </h3>
+                    <p class="text-sm text-stone-500">Kirimkan DP sebesar <strong class="text-brand-900">Rp 50.000</strong> ke salah satu rekening resmi Berliana Attire di bawah ini:</p>
+                    
+                    <div class="space-y-4">
+                        <!-- DANA Card -->
+                        <div class="p-4 border border-rose-100 bg-rose-50/20 rounded-2xl flex items-center gap-4 relative overflow-hidden">
+                            <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center font-bold text-xl">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <span class="text-xs font-semibold text-sky-600 block uppercase tracking-wide">DANA</span>
+                                <span class="font-extrabold text-stone-800 text-lg block">0857 8360 7738</span>
+                                <span class="text-xs text-stone-500">a.n. Berliana Dwi Hastian</span>
+                            </div>
+                            <button onclick="copyToClipboard('085783607738')" class="p-2 bg-stone-100 hover:bg-stone-200 rounded-lg text-xs text-stone-600 transition" title="Salin nomor">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- SeaBank Card -->
+                        <div class="p-4 border border-rose-100 bg-rose-50/20 rounded-2xl flex items-center gap-4 relative overflow-hidden">
+                            <div class="w-12 h-12 bg-amber-100 text-brand-gold rounded-xl flex items-center justify-center font-bold text-xl">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <span class="text-xs font-semibold text-brand-gold block uppercase tracking-wide">SEABANK</span>
+                                <span class="font-extrabold text-stone-800 text-lg block">9013 9202 1569</span>
+                                <span class="text-xs text-stone-500">a.n. BERLIANA DWI HASTIAN</span>
+                            </div>
+                            <button onclick="copyToClipboard('901392021569')" class="p-2 bg-stone-100 hover:bg-stone-200 rounded-lg text-xs text-stone-600 transition" title="Salin nomor">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border border-brand-gold/30 rounded-3xl p-6 sm:p-8 space-y-4">
+                    <h4 class="font-bold text-brand-gold text-sm uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-circle-exclamation"></i> Langkah Setelah Transfer
+                    </h4>
+                    <ol class="text-xs sm:text-sm text-stone-700 space-y-3 list-decimal list-inside leading-relaxed">
+                        <li>Lakukan transfer DP sebesar <strong>Rp 50.000</strong> ke salah satu rekening di atas.</li>
+                        <li>Isi formulir pemesanan di samping ini secara lengkap.</li>
+                        <li>Tekan tombol <strong>"Booking Sekarang"</strong>.</li>
+                        <li>Kirim pesan WhatsApp otomatis yang terbuka beserta <strong>Bukti Transfer (Screenshot)</strong> ke nomor admin Berliana Attire.</li>
+                    </ol>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-900 text-rose-100 py-12 mt-20 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <span class="text-xl font-bold font-playfair tracking-wider text-rose-50">BERLIANA<span class="text-brand-gold"> ATTIRE</span></span>
+                <p class="text-xs text-rose-200/70 max-w-xs leading-relaxed">
+                    Penyedia jasa sewa kebaya premium terpercaya untuk hari istimewa Anda. Kepuasan, kenyamanan, dan keanggunan Anda adalah prioritas kami.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Butik & Pengembalian</h4>
+                <p class="text-xs text-rose-200/70 leading-relaxed">
+                    Pengambilan Kebaya: H-1 Acara<br>
+                    Pengembalian Kebaya: H+1 Acara<br>
+                    Kebaya dikembalikan dalam keadaan kotor (Tidak perlu dicuci).
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Kontak Admin</h4>
+                <p class="text-xs text-rose-200/70 leading-relaxed mb-3">
+                    Ada pertanyaan? Hubungi kami langsung via WhatsApp untuk respon cepat.
+                </p>
+                <a href="https://wa.me/6285964144213" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition">
+                    <i class="fa-brands fa-whatsapp"></i> Chat Admin (0859-6414-4213)
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-brand-800/60 text-center text-xs text-rose-200/50">
+            &copy; 2026 Berliana Attire. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Notification / Toast Container -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-stone-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-brand-gold" id="toastIcon"></i>
+        <span id="toastMsg" class="text-sm">Notifikasi</span>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js" type="module"></script>
+
+    <!-- App Logic Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, getDoc, collection, query, onSnapshot, addDoc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global State & Config Setup
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'berliana-attire-app';
+        let firebaseConfig = null;
+        let useFirebase = false;
+
+        // Cek secara aman apakah konfigurasi platform server benar-benar aktif
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+            try {
+                const parsed = JSON.parse(__firebase_config);
+                if (parsed && parsed.apiKey && parsed.apiKey !== "") {
+                    firebaseConfig = parsed;
+                }
+            } catch(e) {
+                console.warn("Konfigurasi Firebase gagal di-parse, beralih ke mode penyimpanan lokal.");
+            }
+        }
+
+        // Jalankan Firebase secara kondisional agar script utama tidak crash jika konfigurasi kosong
+        let app, auth, db;
+        const dbStatusLabel = document.getElementById('dbStatus');
+
+        if (firebaseConfig) {
+            try {
+                app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+                useFirebase = true;
+                if (dbStatusLabel) {
+                    dbStatusLabel.textContent = "Server Firebase Aktif";
+                    dbStatusLabel.className = "text-xs px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-full font-normal";
+                }
+            } catch (error) {
+                console.error("Gagal inisialisasi Firebase, mengaktifkan mode lokal:", error);
+                useFirebase = false;
+            }
+        }
+
+        if (!useFirebase) {
+            console.log("Menjalankan website dalam mode penyimpanan lokal (LocalStorage).");
+            if (dbStatusLabel) {
+                dbStatusLabel.textContent = "Penyimpanan Lokal Aktif";
+                dbStatusLabel.className = "text-xs px-2 py-0.5 bg-amber-100 text-amber-800 rounded-full font-normal";
+            }
+        }
+
+        // State variables
+        let currentUser = null;
+        let kebayas = [];
+        let bookings = [];
+        let adminMode = false;
+
+        // Default Kebayas to seed if DB/LocalStorage is empty
+        const defaultKebayas = [
+            {
+                id: "k1",
+                name: "Kebaya Brokat Sage Green Elegant",
+                image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600",
+                sizes: ["S", "M", "L"],
+                price: 150000
+            },
+            {
+                id: "k2",
+                name: "Kebaya Modern Maroon Luxury",
+                image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600",
+                sizes: ["M", "L", "XL"],
+                price: 175000
+            },
+            {
+                id: "k3",
+                name: "Kebaya Kutubaru Rose Gold",
+                image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600",
+                sizes: ["S", "M", "L", "XL"],
+                price: 160000
+            },
+            {
+                id: "k4",
+                name: "Kebaya Payet Hitam Klasik",
+                image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&q=80&w=600",
+                sizes: ["M", "XL"],
+                price: 155000
+            }
+        ];
+
+        // ------------------ LOCALSTORAGE STORAGE ENGINE ------------------
+        const loadLocalData = () => {
+            const localKebab = localStorage.getItem('berliana_kebayas');
+            if (!localKebab) {
+                localStorage.setItem('berliana_kebayas', JSON.stringify(defaultKebayas));
+                kebayas = [...defaultKebayas];
+            } else {
+                kebayas = JSON.parse(localKebab);
+            }
+
+            const localBookings = localStorage.getItem('berliana_bookings');
+            if (!localBookings) {
+                localStorage.setItem('berliana_bookings', JSON.stringify([]));
+                bookings = [];
+            } else {
+                bookings = JSON.parse(localBookings);
+            }
+
+            renderCatalog();
+            updateBookingFormDropdowns();
+            updateAdminBookingsList();
+        };
+
+        const saveLocalKebayas = (data) => {
+            localStorage.setItem('berliana_kebayas', JSON.stringify(data));
+            kebayas = data;
+            renderCatalog();
+            updateBookingFormDropdowns();
+        };
+
+        const saveLocalBookings = (data) => {
+            localStorage.setItem('berliana_bookings', JSON.stringify(data));
+            bookings = data;
+            updateAdminBookingsList();
+        };
+        // -----------------------------------------------------------------
+
+        // Auth initialization
+        const initAuth = async () => {
+            if (!useFirebase) {
+                loadLocalData();
+                return;
+            }
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Authentication Error: ", error);
+                useFirebase = false; // Beralih otomatis ke lokal tanpa menghentikan JavaScript
+                loadLocalData();
+            }
+        };
+
+        // Initialize App & Listeners
+        window.addEventListener('DOMContentLoaded', () => {
+            initAuth();
+            
+            if (useFirebase) {
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        currentUser = user;
+                        setupDatabaseListeners();
+                    }
+                });
+            }
+        });
+
+        // Setup Realtime Database Listeners (Only if Firebase is running)
+        const setupDatabaseListeners = () => {
+            if (!currentUser || !useFirebase) return;
+
+            // 1. Kebayas catalog listener
+            const kebayasColRef = collection(db, 'artifacts', appId, 'public', 'data', 'kebayas');
+            onSnapshot(kebayasColRef, (snapshot) => {
+                kebayas = [];
+                snapshot.forEach((doc) => {
+                    kebayas.push({ id: doc.id, ...doc.data() });
+                });
+
+                // Seed database with defaults if empty
+                if (kebayas.length === 0) {
+                    seedDefaultKebayas();
+                } else {
+                    renderCatalog();
+                    updateBookingFormDropdowns();
+                }
+            }, (error) => {
+                console.error("Error fetching kebayas: ", error);
+                useFirebase = false;
+                loadLocalData();
+            });
+
+            // 2. Bookings listener
+            const bookingsColRef = collection(db, 'artifacts', appId, 'public', 'data', 'bookings');
+            onSnapshot(bookingsColRef, (snapshot) => {
+                bookings = [];
+                snapshot.forEach((doc) => {
+                    bookings.push({ id: doc.id, ...doc.data() });
+                });
+                updateAdminBookingsList();
+            }, (error) => {
+                console.error("Error fetching bookings: ", error);
+            });
+        };
+
+        // Seed default catalog kebayas helper
+        const seedDefaultKebayas = async () => {
+            if (!useFirebase) return;
+            for (const item of defaultKebayas) {
+                const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'kebayas', item.id);
+                await setDoc(docRef, {
+                    name: item.name,
+                    image: item.image,
+                    sizes: item.sizes,
+                    price: item.price
+                });
+            }
+        };
+
+        // Render Catalog to UI
+        const renderCatalog = () => {
+            const grid = document.getElementById('katalogGrid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            if (kebayas.length === 0) {
+                grid.innerHTML = `<div class="col-span-full py-12 text-center text-stone-500">Katalog kosong. Hubungi owner untuk isi produk.</div>`;
+                return;
+            }
+
+            kebayas.forEach((kebaya) => {
+                const imgUrl = kebaya.image || "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600";
+                const sizesStr = kebaya.sizes && Array.isArray(kebaya.sizes) ? kebaya.sizes.join(', ') : 'S, M, L';
+                const formattedPrice = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(kebaya.price || 150000);
+
+                const cardHtml = `
+                    <div class="bg-white border border-rose-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
+                        <div class="relative overflow-hidden aspect-[4/5] bg-stone-100">
+                            <img src="${imgUrl}" alt="${kebaya.name}" onerror="this.src='https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            ${adminMode ? `
+                                <div class="absolute top-3 right-3 flex gap-1.5">
+                                    <button onclick="editKebayaUI('${kebaya.id}')" class="p-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-xs font-bold shadow-md transition" title="Edit Kebaya">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                    <button onclick="deleteKebayaUI('${kebaya.id}')" class="p-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold shadow-md transition" title="Hapus Kebaya">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow space-y-3">
+                            <h3 class="font-bold text-brand-900 leading-snug text-base line-clamp-2">${kebaya.name}</h3>
+                            <div class="flex items-center gap-1.5 text-xs text-stone-500 bg-stone-50 p-2 rounded-lg">
+                                <span class="font-semibold text-stone-700">Ukuran:</span>
+                                <span class="tracking-wide">${sizesStr}</span>
+                            </div>
+                            <div class="flex items-baseline justify-between pt-2 border-t border-rose-50 mt-auto">
+                                <span class="text-xs text-stone-400">Harga Sewa</span>
+                                <span class="text-base font-extrabold text-brand-gold">${formattedPrice}/3 hari</span>
+                            </div>
+                            <a href="#booking" onclick="selectKebayaInForm('${kebaya.id}')" class="w-full py-2.5 bg-rose-50 hover:bg-brand-gold hover:text-white text-brand-800 rounded-xl text-xs font-bold text-center transition tracking-wider uppercase mt-2">
+                                Pilih Kebaya
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        };
+
+        // Populate Booking Form Dropdowns
+        const updateBookingFormDropdowns = () => {
+            const selectKebaya = document.getElementById('custKebayaSelect');
+            if (!selectKebaya) return;
+            const savedValue = selectKebaya.value;
+
+            selectKebaya.innerHTML = '<option value="">-- Pilih Kebaya --</option>';
+
+            kebayas.forEach(kebaya => {
+                const opt = document.createElement('option');
+                opt.value = kebaya.id;
+                opt.textContent = `${kebaya.name} (${new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(kebaya.price || 150000)})`;
+                selectKebaya.appendChild(opt);
+            });
+
+            if (kebayas.some(k => k.id === savedValue)) {
+                selectKebaya.value = savedValue;
+            }
+            updateSizeDropdown();
+        };
+
+        // Update Size Dropdown depending on Selected Kebaya
+        window.updateSizeDropdown = () => {
+            const selectKebaya = document.getElementById('custKebayaSelect');
+            const selectSize = document.getElementById('custSizeSelect');
+            if (!selectKebaya || !selectSize) return;
+            const selectedId = selectKebaya.value;
+
+            selectSize.innerHTML = '<option value="">-- Pilih Ukuran --</option>';
+
+            if (!selectedId) return;
+
+            const kebaya = kebayas.find(k => k.id === selectedId);
+            if (kebaya && kebaya.sizes) {
+                kebaya.sizes.forEach(size => {
+                    const opt = document.createElement('option');
+                    opt.value = size;
+                    opt.textContent = `Size ${size}`;
+                    selectSize.appendChild(opt);
+                });
+            }
+        };
+
+        // Select specific kebaya from catalog action
+        window.selectKebayaInForm = (kebayaId) => {
+            const selectKebaya = document.getElementById('custKebayaSelect');
+            if (selectKebaya) {
+                selectKebaya.value = kebayaId;
+                updateSizeDropdown();
+                showToast("Kebaya berhasil dipilih! Silakan isi formulir sewa.");
+            }
+        };
+
+        // Handle Booking Submission
+        window.handleBookingSubmit = async (e) => {
+            e.preventDefault();
+
+            const custName = document.getElementById('custName').value.trim();
+            const custPhone = document.getElementById('custPhone').value.trim();
+            const custHeight = document.getElementById('custHeight').value.trim();
+            const custWeight = document.getElementById('custWeight').value.trim();
+            const kebayaId = document.getElementById('custKebayaSelect').value;
+            const size = document.getElementById('custSizeSelect').value;
+            const date = document.getElementById('custDate').value;
+
+            if (!custName || !custPhone || !custHeight || !custWeight || !kebayaId || !size || !date) {
+                showToast("Harap isi semua kolom formulir pemesanan.", true);
+                return;
+            }
+
+            const selectedKebayaObj = kebayas.find(k => k.id === kebayaId);
+            if (!selectedKebayaObj) return;
+
+            const formatCurrency = (val) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(val);
+
+            // Prepare Booking Document
+            const bookingData = {
+                id: "b_" + Date.now(),
+                custName,
+                custPhone,
+                custHeight: Number(custHeight),
+                custWeight: Number(custWeight),
+                kebayaId,
+                kebayaName: selectedKebayaObj.name,
+                kebayaPrice: selectedKebayaObj.price,
+                size,
+                date,
+                status: "Pending DP",
+                timestamp: Date.now()
+            };
+
+            try {
+                if (useFirebase) {
+                    const bookingsColRef = collection(db, 'artifacts', appId, 'public', 'data', 'bookings');
+                    await addDoc(bookingsColRef, bookingData);
+                } else {
+                    const newBookings = [...bookings, bookingData];
+                    saveLocalBookings(newBookings);
+                }
+
+                showToast("Pesanan tersimpan! Menghubungkan ke WhatsApp...");
+
+                // Formulate WhatsApp message text
+                const waMessage = `Halo Admin Berliana Attire, saya ingin melakukan pemesanan sewa kebaya:
+
+*DATA PENYEWA:*
+• Nama Lengkap: ${custName}
+• No. WhatsApp: ${custPhone}
+• Tinggi / Berat Badan: ${custHeight} cm / ${custWeight} kg
+• Tanggal Sewa: ${date} (Masa Sewa 3 Hari)
+
+*DETAIL KEBAYA:*
+• Nama Kebaya: ${selectedKebayaObj.name}
+• Ukuran Pilihan: Size ${size}
+• Harga Sewa: ${formatCurrency(selectedKebayaObj.price)} / 3 Hari
+• Ketentuan DP: Rp 50.000 (Sisa sewa dibayar saat ambil kebaya)
+
+Saya akan segera mengirimkan bukti screenshot transfer DP Rp 50.000 atas nama saya. Terima kasih!`;
+
+                const encodedMessage = encodeURIComponent(waMessage);
+                const waLink = `https://api.whatsapp.com/send?phone=6285964144213&text=${encodedMessage}`;
+                
+                setTimeout(() => {
+                    window.open(waLink, '_blank');
+                }, 1000);
+
+                document.getElementById('bookingForm').reset();
+                updateBookingFormDropdowns();
+
+            } catch (err) {
+                console.error("Error saving booking: ", err);
+                showToast("Terjadi kesalahan saat menyimpan pemesanan.", true);
+            }
+        };
+
+        // ADMIN CONTROL PANEL ACTIONS
+        window.toggleAdminMode = () => {
+            adminMode = !adminMode;
+            const adminPanel = document.getElementById('adminPanel');
+            const adminBtnText = document.getElementById('adminBtnText');
+            
+            if (adminMode) {
+                if (adminPanel) adminPanel.classList.remove('hidden');
+                if (adminBtnText) adminBtnText.textContent = "Keluar Mode Owner";
+                showToast("Mode Owner aktif! Anda sekarang bisa menambah, mengedit, menghapus katalog & memantau pesanan.");
+            } else {
+                if (adminPanel) adminPanel.classList.add('hidden');
+                if (adminBtnText) adminBtnText.textContent = "Mode Owner";
+                showToast("Mode Owner dinonaktifkan.");
+            }
+            renderCatalog();
+        };
+
+        window.showAdminSection = (sectionName) => {
+            document.getElementById('admin-katalog-editor').classList.add('hidden');
+            document.getElementById('admin-pesanan-viewer').classList.add('hidden');
+            document.getElementById(`admin-${sectionName}`).classList.remove('hidden');
+        };
+
+        // Save (Add or Update) Kebaya
+        window.saveKebaya = async (e) => {
+            e.preventDefault();
+
+            const kebayaIdInput = document.getElementById('kebayaId').value;
+            const name = document.getElementById('kebayaName').value.trim();
+            const imageInput = document.getElementById('kebayaImage').value.trim();
+            const sizesRaw = document.getElementById('kebayaSizes').value;
+            const price = Number(document.getElementById('kebayaPrice').value);
+
+            const image = imageInput || "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600";
+            const sizes = sizesRaw.split(',').map(s => s.trim().toUpperCase()).filter(s => s.length > 0);
+
+            try {
+                if (useFirebase) {
+                    if (kebayaIdInput) {
+                        const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'kebayas', kebayaIdInput);
+                        await updateDoc(docRef, { name, image, sizes, price });
+                        showToast("Katalog kebaya berhasil di-update!");
+                    } else {
+                        const kebayasColRef = collection(db, 'artifacts', appId, 'public', 'data', 'kebayas');
+                        await addDoc(kebayasColRef, { name, image, sizes, price });
+                        showToast("Kebaya baru berhasil ditambahkan!");
+                    }
+                } else {
+                    let updatedKebayas = [...kebayas];
+                    if (kebayaIdInput) {
+                        updatedKebayas = updatedKebayas.map(k => k.id === kebayaIdInput ? { id: k.id, name, image, sizes, price } : k);
+                        showToast("Katalog kebaya berhasil di-update (Lokal)!");
+                    } else {
+                        const newId = "k_" + Date.now();
+                        updatedKebayas.push({ id: newId, name, image, sizes, price });
+                        showToast("Kebaya baru berhasil ditambahkan (Lokal)!");
+                    }
+                    saveLocalKebayas(updatedKebayas);
+                }
+
+                document.getElementById('kebayaForm').reset();
+                document.getElementById('kebayaId').value = '';
+            } catch (err) {
+                console.error("Error saving kebaya: ", err);
+                showToast("Gagal menyimpan data kebaya.", true);
+            }
+        };
+
+        // Fill Admin Form with Kebaya details to Edit
+        window.editKebayaUI = (id) => {
+            const kebaya = kebayas.find(k => k.id === id);
+            if (!kebaya) return;
+
+            document.getElementById('kebayaId').value = kebaya.id;
+            document.getElementById('kebayaName').value = kebaya.name;
+            document.getElementById('kebayaImage').value = kebaya.image || '';
+            document.getElementById('kebayaSizes').value = kebaya.sizes ? kebaya.sizes.join(', ') : 'S, M, L';
+            document.getElementById('kebayaPrice').value = kebaya.price || 150000;
+
+            document.getElementById('adminPanel').scrollIntoView({ behavior: 'smooth' });
+            showAdminSection('katalog-editor');
+            showToast(`Mengedit: ${kebaya.name}`);
+        };
+
+        // Delete Kebaya
+        window.deleteKebayaUI = async (id) => {
+            if (!confirm("Apakah Anda yakin ingin menghapus kebaya ini dari katalog?")) return;
+            try {
+                if (useFirebase) {
+                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'kebayas', id);
+                    await deleteDoc(docRef);
+                    showToast("Kebaya berhasil dihapus dari katalog.");
+                } else {
+                    const updated = kebayas.filter(k => k.id !== id);
+                    saveLocalKebayas(updated);
+                    showToast("Kebaya berhasil dihapus (Lokal).");
+                }
+            } catch (err) {
+                console.error("Error deleting kebaya: ", err);
+                showToast("Gagal menghapus kebaya.", true);
+            }
+        };
+
+        // Update Admin bookings viewer UI list
+        const updateAdminBookingsList = () => {
+            const tbody = document.getElementById('bookingsTableBody');
+            const countBadge = document.getElementById('bookingCount');
+            if (!tbody || !countBadge) return;
+            
+            countBadge.textContent = bookings.length;
+
+            if (bookings.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="p-6 text-center text-stone-400">Belum ada pesanan masuk di database.</td></tr>`;
+                return;
+            }
+
+            const sortedBookings = [...bookings].sort((a, b) => b.timestamp - a.timestamp);
+
+            tbody.innerHTML = '';
+            sortedBookings.forEach((book) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-stone-50 transition";
+                
+                tr.innerHTML = `
+                    <td class="p-3">
+                        <div class="font-bold text-stone-800">${book.custName}</div>
+                        <div class="text-xs text-stone-400">Sewa: ${new Date(book.timestamp).toLocaleDateString('id-ID')}</div>
+                    </td>
+                    <td class="p-3">
+                        <a href="https://wa.me/62${book.custPhone.replace(/^0/, '')}" target="_blank" class="text-xs text-emerald-600 hover:underline font-semibold flex items-center gap-1">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> ${book.custPhone}
+                        </a>
+                    </td>
+                    <td class="p-3 text-xs text-stone-600">
+                        ${book.custHeight} cm / ${book.custWeight} kg
+                    </td>
+                    <td class="p-3">
+                        <div class="text-xs font-semibold text-brand-900">${book.kebayaName}</div>
+                        <div class="text-xs text-stone-500">Size: ${book.size}</div>
+                    </td>
+                    <td class="p-3 text-xs font-bold text-stone-700">
+                        ${book.date}
+                    </td>
+                    <td class="p-3">
+                        <button onclick="deleteBookingUI('${book.id}')" class="p-1.5 bg-rose-50 text-rose-600 hover:bg-rose-100 rounded-lg text-xs transition" title="Hapus Riwayat">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        };
+
+        // Delete Booking Log
+        window.deleteBookingUI = async (id) => {
+            if (!confirm("Hapus data penyewa ini dari database riwayat?")) return;
+            try {
+                if (useFirebase) {
+                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'bookings', id);
+                    await deleteDoc(docRef);
+                } else {
+                    const updated = bookings.filter(b => b.id !== id);
+                    saveLocalBookings(updated);
+                }
+                showToast("Data pesanan berhasil dihapus.");
+            } catch (err) {
+                console.error("Gagal menghapus pesanan: ", err);
+            }
+        };
+
+        // Clear all bookings history
+        window.clearAllBookings = async () => {
+            if (!confirm("PERINGATAN: Apakah Anda yakin ingin menghapus SELURUH daftar pesanan?")) return;
+            try {
+                if (useFirebase) {
+                    for (const book of bookings) {
+                        const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'bookings', book.id);
+                        await deleteDoc(docRef);
+                    }
+                } else {
+                    saveLocalBookings([]);
+                }
+                showToast("Seluruh riwayat pesanan berhasil dihapus.");
+            } catch (err) {
+                console.error("Gagal menghapus semua pesanan: ", err);
+            }
+        };
+
+        // Helper UI: Copy account details to clipboard
+        window.copyToClipboard = (text) => {
+            const input = document.createElement('input');
+            input.setAttribute('value', text);
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            showToast("Nomor berhasil disalin ke clipboard!");
+        };
+
+        // Helper UI: Custom Toast notification
+        const showToast = (message, isError = false) => {
+            const toast = document.getElementById('toast');
+            const icon = document.getElementById('toastIcon');
+            const msg = document.getElementById('toastMsg');
+
+            if (!toast || !icon || !msg) return;
+
+            msg.textContent = message;
+            
+            if (isError) {
+                icon.className = "fa-solid fa-circle-exclamation text-rose-500";
+            } else {
+                icon.className = "fa-solid fa-circle-check text-amber-500";
+            }
+
+            toast.className = "fixed bottom-5 right-5 z-50 bg-stone-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transform translate-y-0 opacity-100 transition-all duration-300";
+
+            setTimeout(() => {
+                toast.className = "fixed bottom-5 right-5 z-50 bg-stone-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none";
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
